@@ -10,7 +10,7 @@ subnet=""
 rangip=""
 dns=""
 
-# --------------------------IP addr validation -----------------------------
+# --------------------------IP address validation -----------------------------
 def validate_ipv4(address):
     pattern = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     return bool(pattern.match(address))
@@ -18,7 +18,7 @@ def validate_ipv4(address):
 # Function to save the scanning report
 def save_report(output):
     save_choice = input("Do you want to save the scanning report? (yes/no): ")
-    if save_choice.lower() in ("yes", "y"):
+    if save_choice.lower() in ("yes", "y","Y"):
         save_format = input("Choose the format to save the report (1.pdf or 2.txt): ")
         if save_format.lower() in ("pdf", "1"):
             save_to_pdf(output)
